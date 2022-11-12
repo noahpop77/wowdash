@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>World of Warcraft Classic Server Information</h1>
+    <br>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Server Name</th>
+                <th scope="col">Server ID</th>
+                <th scope="col">Population</th>
+                <th scope="col">Server Queue</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for post in posts%}
+                {%for cell in post%}
+                    <tr>
+                        <td>{{cell.name}}</td>
+                        <td>{{cell.id}}</td>
+                        <td>{{cell.population}}</td>
+                        <td>{{cell.has_queue}}</td>
+                    </tr>
+                {%endfor%}
+            {%endfor%}
+        </tbody>
+    </table>
+
+{% endblock content %}
