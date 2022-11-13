@@ -8,7 +8,7 @@ from configparser import ConfigParser
 def getrealms():
     # Read config.ini file
     config_object = ConfigParser()
-    config_object.read("wowdash/dash/config.ini")
+    config_object.read("dash/config.ini")
     print(os.getcwd())
     # Get the password
     keys = config_object["apikeys"]
